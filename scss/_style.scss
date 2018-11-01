@@ -1,0 +1,299 @@
+/* Table of contents (as appears on page)*/
+/* 1. Nav-menu */
+/* 2. Hero */
+/* 3. General content */
+/* 4. About */
+/* 5. Projects */
+/* 6. Contact */
+/* 7. Footer */
+/* 8. Keyframes */
+/* 9. Media queries */
+
+/*1. Nav-menu */
+
+.navbar {
+	background-color: #ffffffdb;
+	border-bottom: 2px solid white;
+	position: fixed;
+	.logo {
+		width: 150px;
+		padding: 1rem;
+	}
+	.navbar-menu {
+		background: transparent;
+		align-items: center;
+		color: black;
+	}
+	.navbar-end {
+		align-items: center;
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		background: transparent;
+	}
+	.navbar-burger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3rem;
+		color: #4286f4;
+	}
+	.navbar-item {
+		font-size: 2rem;
+		font-weight: bold;
+		background: none;
+		color: #4286f4;
+		&:hover {
+			background: none;
+			color: black;
+		}
+		.navbar-link li a {
+			color: #4286f4;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.navbar li a:hover {
+	background: none;
+}
+.is-active {
+	text-align: center;
+	padding: 0;
+}
+
+/*2. Hero */
+#hero {
+	height: 100vh;
+	position: relative;
+	.hero-img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+	h1 {
+		position: absolute;
+		font-size: 7rem;
+		color: white;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		font-family: "Kaushan Script", cursive;
+	}
+	.fa-angle-down {
+		position: absolute;
+		color: white;
+		top: 75%;
+		left: 50%;
+		font-size: 3rem;
+		animation-name: pulse;
+		animation-duration: 1s;
+		transition: ease;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
+
+/*3. general content */
+html {
+	scroll-behavior: smooth;
+	background: black;
+}
+body {
+	color: white;
+	background-color: black;
+	.content {
+		font-family: "Roboto", sans-serif;
+		h2 {
+			font-size: 3rem;
+			padding: 2rem 0 5rem 0;
+			color: white;
+			text-align: center;
+		}
+		h3 {
+			font-size: 2rem;
+			color: white;
+			text-align: center;
+			padding: 2rem 0;
+		}
+		h6 {
+			color: white;
+			font-size: 1.3rem;
+		}
+		p {
+			font-size: 1.5rem;
+			padding: 2rem 0;
+		}
+		.column {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 2rem;
+		}
+		.padder {
+			height: 3rem;
+		}
+		i {
+			color: #4286f4;
+		}
+	}
+}
+
+/*4. about */
+
+/*5. projects */
+.project-img img {
+	width: 100%;
+	border-radius: 8px;
+}
+
+/* 6. contact */
+.content #form-content {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 50%;
+	padding: 1rem;
+	p {
+		padding: 1rem 0;
+		margin-bottom: 0;
+	}
+	.contact-txt {
+		resize: none;
+		margin-bottom: 1rem;
+		outline: 2px solid #4286f4;
+		border: none;
+		padding: 0.5rem 0.1rem;
+	}
+	.contact-input {
+		outline: 2px solid #4286f4;
+		border: none;
+		padding: 0.5rem 0.1rem;
+	}
+	.submit-btn {
+		width: 90px;
+		margin: 1rem 0;
+		border-radius: 4px;
+		border: 2px solid white;
+		background: #4286f4;
+		color: white;
+		font-weight: bold;
+		&:hover {
+			background: white;
+			border: 2px solid #4286f4;
+			color: #4286f4;
+		}
+	}
+}
+.contact-details {
+	padding: 5rem 2rem;
+	a {
+		color: white;
+		text-decoration: underline;
+		&:hover {
+			color: #4286f4;
+		}
+	}
+}
+
+.contact-img i {
+	font-size: 4rem;
+}
+/* 7. Footer */
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 5rem;
+}
+/*8. keyframes */
+@keyframes pulse {
+	0% {
+		font-size: 3rem;
+		opacity: 100;
+	}
+	25% {
+		font-size: 3.1rem;
+		opacity: 100;
+	}
+	50% {
+		font-size: 3.2rem;
+		opacity: 100;
+	}
+	75% {
+		font-size: 3.1rem;
+		opacity: 100;
+	}
+
+	100% {
+		font-size: 3rem;
+		opacity: 0;
+	}
+}
+/*9. media queries */
+
+@media only screen and (max-width: 1088px) {
+	.navbar-burger i {
+		padding: 2rem 1rem 0 0;
+	}
+	.navbar-menu ul {
+		flex-direction: column;
+	}
+	.custom-logo {
+		padding: 1rem;
+	}
+
+	.logo {
+		padding: 1rem 1rem;
+	}
+	.about-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+	.projects-info .column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+	}
+	.content {
+		padding: 0 2rem;
+	}
+	h1 {
+		font-size: 4rem;
+	}
+	.contact-details p {
+		padding: 0 0 2rem 0;
+	}
+	.content #form-content {
+		width: 100%;
+	}
+	footer {
+		flex-direction: column;
+
+		text-align: center;
+	}
+	#hero .fa-angle-down {
+		top: 90%;
+	}
+	.contact-img i {
+		font-size: 2rem;
+	}
+}
+@media only screen and (min-width: 1088px) {
+	.fa-bars {
+		display: none;
+	}
+}
+
+/* keyframes */
