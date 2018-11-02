@@ -146,7 +146,9 @@ body {
 }
 
 /*4. about */
-
+.about-info ul li {
+	font-size: 1.5rem;
+}
 /*5. projects */
 .project-img img {
 	width: 100%;
@@ -269,7 +271,7 @@ footer {
 	.content {
 		padding: 0 2rem;
 	}
-	h1 {
+	#hero h1 {
 		font-size: 4rem;
 	}
 	.contact-details p {
